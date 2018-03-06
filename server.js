@@ -79,7 +79,7 @@ app.put('/posts/:id', (req, res) => {
   
   BlogPost
     .findByIdAndUpdate(req.params.id, {$set: updated}, {new: true})
-    .then(updatedtPost => res.status(204).end())
+    .then(updatedPost => res.status(204).end())
     .catch(err => res.status(500).json({message: 'Something went wrong'}));
 });
 
@@ -89,7 +89,7 @@ app.delete('/posts/:id', (req, res) => {
   BlogPost
     .findByIdAndRemove(req.params.id)
     .then(() => {
-      res.status(204).json({error: 'Success'});
+      res.status(204).json({message: 'Success'});
     })
     .catch(err => {
       console.error(err);
