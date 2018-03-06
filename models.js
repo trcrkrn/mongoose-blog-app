@@ -17,7 +17,7 @@ blogPostSchema.virtual('authorName').get(function() {
   return `${this.author.firstName} ${this.author.lastName}`.trim();
 });
 
-blogPostSchema.methoda.serialize = function() {
+blogPostSchema.methods.serialize = function() {
   return {
     id: this._id,
     title: this.title,
