@@ -2,7 +2,7 @@
 
 const chai = require('chai');
 const chaiHttp = require('chai-http');
-const faker = require('../seed-data');
+const faker = require('faker');
 const mongoose = require('mongoose');
 
 // this makes the should syntax available throughout
